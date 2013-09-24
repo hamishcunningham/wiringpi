@@ -1,0 +1,11 @@
+The Debian Package for WiringPi
+-------------------------------
+
+Comments regarding the package:
+
+- a simple Debian package for WiringPi -- http://wiringpi.com/ -- by Gordon
+  Henderson -- http://drogon.net/
+- packaging code seeded from
+  https://github.com/hamishcunningham/pi-tronics/tree/master/simbamon
+
+-- Hamish Cunningham <hamish@gate.ac.uk>  Tue, 24 Sep 2013 17:15:07 +0300

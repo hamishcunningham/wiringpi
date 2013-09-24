@@ -1,0 +1,20 @@
+Source: wiringpi
+Section: admin
+Priority: optional
+Maintainer: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Build-Depends: debhelper (>= 8.0.0), devscripts
+Standards-Version: 3.9.3
+Homepage: http://wiringpi.com/
+Vcs-Git: git://git.drogon.net/wiringPi
+Vcs-Browser: 
+
+Package: wiringpi
+Architecture: armhf
+Depends: ${misc:Depends}
+Recommends: 
+Description: WiringPi, a GPIO library for the Raspberry Pi by Gordon Henderson
+ WiringPi is a GPIO access library written in C for the BCM2835 used in the
+ Raspberry Pi. It's released under the GNU LGPLv3 license and is usable from C
+ and C++ and many other languages with suitable wrappers. There's also a
+ command-line version. It's designed to be familiar to people who have used
+ the Arduino "wiring" system. See http://wiringpi.com/
