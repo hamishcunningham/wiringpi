@@ -1,0 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 25 Sep 2013 15:07:24 +0100
+Source: wiringpi
+Binary: wiringpi
+Architecture: source
+Version: 2.13+14
+Distribution: precise
+Urgency: low
+Maintainer: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Changed-By: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Description: 
+ wiringpi   - A GPIO library for the Raspberry Pi by Gordon Henderson
+Changes: 
+ wiringpi (2.13+14) precise; urgency=low
+ .
+   * Snapshots in the 2.13+14 series.
+Checksums-Sha1: 
+ 160f380d7a5417d88a5041894ef0a3724747524d 1518 wiringpi_2.13+14.dsc
+ b770e602494f227e154fd4d1d0d14b431f4edd61 119460 wiringpi_2.13+14.tar.gz
+Checksums-Sha256: 
+ e07053f6caefdf13bf613cadbd26ff839c3782a32df9d35afca7acd482807a48 1518 wiringpi_2.13+14.dsc
+ 14ec72d1ac52d9f20de9111dd058792967ecbeb346edfb95a0661b5bca679e74 119460 wiringpi_2.13+14.tar.gz
+Files: 
+ 4e8b5694b69882a49eaaea89c2d4d6f9 1518 admin optional wiringpi_2.13+14.dsc
+ 94c92db440c4a16bf8b5b989d5898b30 119460 admin optional wiringpi_2.13+14.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJSQvR9AAoJEK3gE8dtAR3xc4UP/20QoCDgjgUJjregqM9ylYZQ
+K3KgZYfdbwznTa208j+uj725SXHiIscAVeY0rRM8p9I+ygFWTEJMyYHchgGF8pXL
+OKsLvrQF09DKYQAmi04eG5Aftqyasg9rzxtmq6cQTlZgww73krrc7qkZUmyNU8S2
+Uq/XDMDBqWXfGV2l1t1NkFXoQDhvufAzYrLhC4w/IUy+fSYNPxnDxq0ry/vD5ytv
+X5YWXbOterU484r46f5Qhs1HLTGHdOodL2oNUCFVKRLIpElLVmGob3er5mLp3oFl
+moTjxIpaxWxVp+infdH2QVN5bCWUdNDwDwTazgk3tFeaaZ0nFrh7LLRJFSZHvLno
++b6bC6Ovs/z1564jcYWpX/tPzv8OIHqMkKlqEOa5WrDmKBnZfTur9q71CpFmCasK
+dLr70t8VK5V2lMwGy5dMNrKeoLVAXpyy7hbOkJ+qqf6sZA25/BbyS2AMp0At20P8
+/zdoorpd0GNsQU/zLVt0prBbNgf1VQz9NBzLXd0iKq21C4WB/7E5nfpZgpMOy28M
+V398vjQ+IDRXIWnU4mQTRi1oXFn557/rTDIhWB02kib5qGLgKGEY+xKFg0iB/CFJ
+cCnyaz/UBmPBqaIEwTFsiL9AeU7ii9hioNZi77GAAWuS67KNnLdpnTw38574M9R6
+8ld+3uqgI4Vb1LBKeDwN
+=OJ1J
+-----END PGP SIGNATURE-----
