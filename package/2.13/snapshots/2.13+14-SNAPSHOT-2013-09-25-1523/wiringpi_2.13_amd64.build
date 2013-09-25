@@ -1,0 +1,26 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -I.git -Ipackage
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): -D_FORTIFY_SOURCE=2
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): -Wl,-Bsymbolic-functions -Wl,-z,relro
+dpkg-buildpackage: source package wiringpi
+dpkg-buildpackage: source version 2.13
+dpkg-buildpackage: source changed by Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+ dpkg-source -I.git -Ipackage --before-build wiringpi
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean 
+dh: No packages to build.
+ dpkg-source -I.git -Ipackage -b wiringpi
+dpkg-source: info: using source format `3.0 (native)'
+dpkg-source: info: building wiringpi in wiringpi_2.13.tar.gz
+dpkg-source: info: building wiringpi in wiringpi_2.13.dsc
+ debian/rules build
+make: `build' is up to date.
+ fakeroot debian/rules binary
+dh binary 
+dh: No packages to build.
+ dpkg-genchanges  >../wiringpi_2.13_amd64.changes
+dpkg-genchanges: error: cannot read files list file: No such file or directory
+dpkg-buildpackage: error: dpkg-genchanges gave error exit status 2
