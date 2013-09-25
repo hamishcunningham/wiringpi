@@ -7,7 +7,7 @@ VERSION=$(shell grep VERSION gpio/gpio.c |head -1 |sed -e 's,[^"]*",,' -e 's,",,
 P=wiringpi
 D=wiringpi
 PD=package/$(VERSION)
-PREFIX=/local
+PREFIX=/usr
 INSTALLED_FILES=\
   $(DESTDIR)$(PREFIX)/bin/gpio \
   $(DESTDIR)$(PREFIX)/lib/*wiringPi* \
@@ -51,25 +51,25 @@ help:
 # (if DESTDIR is set we can assume this is a packaging run, not an install)
 install:
 	@echo -n "WiringPi:     "
-	cd wiringPi; $(MAKE) DESTDIR=$$DESTDIR; \
-          $(MAKE) DESTDIR=$$DESTDIR install
+	cd wiringPi; $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR; \
+          $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR install
 	@echo -n "DevLib:     "
-	cd devLib;   $(MAKE) DESTDIR=$$DESTDIR; \
-          $(MAKE) DESTDIR=$$DESTDIR install
+	cd devLib;   $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR; \
+          $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR install
 	@echo -n "GPIO:     "
-	cd gpio;     $(MAKE) DESTDIR=$$DESTDIR; \
-          $(MAKE) DESTDIR=$$DESTDIR install
+	cd gpio;     $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR; \
+          $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR install
 	@$(do-listing)
 
 # uninstall ##################################################################
 uninstall:
 	@echo 'removing WiringPi files: '
 	@echo -n "WiringPi:     "
-	cd wiringPi; $(MAKE) DESTDIR=$$DESTDIR uninstall
+	cd wiringPi; $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR uninstall
 	@echo -n "DevLib:     "
-	cd devLib;   $(MAKE) DESTDIR=$$DESTDIR uninstall
+	cd devLib;   $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR uninstall
 	@echo -n "GPIO:     "
-	cd gpio;     $(MAKE) DESTDIR=$$DESTDIR uninstall
+	cd gpio;     $(MAKE) PREFIX=$$PREFIX DESTDIR=$$DESTDIR uninstall
 	@$(do-listing)
 	@echo done
 

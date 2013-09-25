@@ -1,5 +1,11 @@
 wiringpi (2.13) unstable; urgency=low
 
+  * Snapshots in the 2.13+14 series.
+
+ -- Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>  Wed, 25 Sep 2013 15:07:24 +0100
+
+wiringpi (2.13) unstable; urgency=low
+
   * Initial Packaging Release.
 
  -- Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>  Tue, 24 Sep 2013 17:15:07 +0300
