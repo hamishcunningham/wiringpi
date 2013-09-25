@@ -83,10 +83,7 @@ clean:
 # package ####################################################################
 #package: package-unstable package-precise
 package: package-unstable
-	@echo "\nunstable:"
 	@ls -lh $(PD)/unstable
-	@echo "\nprecise:"
-	@ls -lh $(PD)/precise
 package-unstable:
 	@echo 'packaging WiringPi for Debian unstable...'
 	mkdir -p $(PD)/unstable
