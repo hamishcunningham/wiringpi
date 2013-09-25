@@ -9,7 +9,7 @@ Vcs-Git: git://git.drogon.net/wiringPi
 Vcs-Browser: 
 
 Package: wiringpi
-Architecture: arm
+Architecture: all
 Depends: ${misc:Depends}
 Recommends:
 Description: A GPIO library for the Raspberry Pi by Gordon Henderson
