@@ -55,7 +55,7 @@ gpio:	$(OBJ)
 .PHONEY:	clean
 clean:
 	@echo "[Clean]"
-	@rm -f $(OBJ) gpio *~ core tags *.bak
+	@rm -f $(OBJ) gpio *~ core tags *.bak gpio.1.gz
 
 .PHONEY:	tags
 tags:	$(SRC)
@@ -65,17 +65,23 @@ tags:	$(SRC)
 .PHONEY:	install
 install:
 	@echo "[Install]"
-	@cp gpio		$(DESTDIR)$(PREFIX)/bin
-	@chown root.root	$(DESTDIR)$(PREFIX)/bin/gpio
-	@chmod 4755		$(DESTDIR)$(PREFIX)/bin/gpio
-	@mkdir -p		$(DESTDIR)$(PREFIX)/man/man1
-	@cp gpio.1		$(DESTDIR)$(PREFIX)/man/man1
+	install -d -m 755       $(DESTDIR)$(PREFIX)/bin
+	install -d -m 755       $(DESTDIR)$(PREFIX)/lib
+	install -d -m 755       $(DESTDIR)$(PREFIX)/include
+	install -d -m 755       $(DESTDIR)$(PREFIX)/man/man1
+	install -m 4755 gpio    $(DESTDIR)$(PREFIX)/bin
+	cat gpio.1 |gzip >gpio.1.gz
+	install gpio.1.gz       $(DESTDIR)$(PREFIX)/man/man1
+
+# TODO do we need this for the final install?
+#	@chown root.root	$(DESTDIR)$(PREFIX)/bin/gpio
 
 .PHONEY:	uninstall
 uninstall:
 	@echo "[UnInstall]"
 	@rm -f $(DESTDIR)$(PREFIX)/bin/gpio
 	@rm -f $(DESTDIR)$(PREFIX)/man/man1/gpio.1
+	@rm -f $(DESTDIR)$(PREFIX)/man/man1/gpio.1.gz
 
 .PHONEY:	depend
 depend:

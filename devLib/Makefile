@@ -33,7 +33,7 @@ DYNAMIC=libwiringPiDev.so.$(VERSION)
 #DEBUG	= -g -O0
 DEBUG	= -O2
 CC	= gcc
-INCLUDE	= -I.
+INCLUDE	= -I$(DESTDIR)$(PREFIX)/include
 CFLAGS	= $(DEBUG) -Wformat=2 -Wall $(INCLUDE) -Winline -pipe -fPIC
 
 LIBS    =
@@ -94,8 +94,8 @@ install:	$(DYNAMIC) install-headers
 	@echo "[Install Dynamic Lib]"
 	@install -m 0755 -d						$(DESTDIR)$(PREFIX)/lib
 	@install -m 0755 libwiringPiDev.so.$(VERSION)			$(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)
-	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)	$(DESTDIR)/lib/libwiringPiDev.so
-	@ldconfig
+	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)    $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so
+	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
 
 .PHONEY:	install-static
 install-static:	$(STATIC) install-headers
@@ -115,7 +115,7 @@ uninstall:
 	@rm -f $(DESTDIR)$(PREFIX)/include/lcd.h
 	@rm -f $(DESTDIR)$(PREFIX)/include/piGlow.h
 	@rm -f $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.*
-	@ldconfig
+	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
 
 
 .PHONEY:	depend

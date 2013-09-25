@@ -7,10 +7,13 @@ VERSION=$(shell grep VERSION gpio/gpio.c |head -1 |sed -e 's,[^"]*",,' -e 's,",,
 P=wiringpi
 D=gpio
 PD=package/$(VERSION)
+PREFIX=/local
 INSTALLED_FILES=\
-  $(DESTDIR)/usr/sbin/$(D) \
+  $(DESTDIR)$(PREFIX)/bin/gpio \
+  $(DESTDIR)$(PREFIX)/lib/*wiringPi* \
+  $(DESTDIR)$(PREFIX)/include/*wiringPi* \
+  $(DESTDIR)$(PREFIX)/man/man1/$(D).1.gz
 #  TODO includes and .so \
-  $(DESTDIR)/usr/share/man/man1/$(D).1.gz
 PACKAGE_FILES=\
   $(P)_$(VERSION)*.deb \
   $(P)_$(VERSION)*.dsc \
@@ -27,7 +30,7 @@ SNAPD:=$(PD)/snapshots/$(SNAPSHOT)
 
 # functions ##################################################################
 do-listing=\
-  ls $(INSTALLED_FILES) || :
+  echo; echo '[Listing installed files:]'; ls -l --color $(INSTALLED_FILES) || :
 
 # help #######################################################################
 help:
@@ -46,24 +49,39 @@ help:
 	@echo '                                                              '
 
 # install ####################################################################
-# (if DESTDIR is set we assume this is a packaging run, not an install)
+# (if DESTDIR is set we can assume this is a packaging run, not an install)
 install:
-#	TODO call subdirs Makes
+	@echo -n "WiringPi:     "
+	cd wiringPi; $(MAKE) DESTDIR=$$DESTDIR; \
+          $(MAKE) DESTDIR=$$DESTDIR install
+	@echo -n "DevLib:     "
+	cd devLib;   $(MAKE) DESTDIR=$$DESTDIR; \
+          $(MAKE) DESTDIR=$$DESTDIR install
+	@echo -n "GPIO:     "
+	cd gpio;     $(MAKE) DESTDIR=$$DESTDIR; \
+          $(MAKE) DESTDIR=$$DESTDIR install
 	@$(do-listing)
 
 # uninstall ##################################################################
 uninstall:
 	@echo 'removing WiringPi files: '
-#	TODO call subdirs Makes
+	@echo -n "WiringPi:     "
+	cd wiringPi; $(MAKE) DESTDIR=$$DESTDIR uninstall
+	@echo -n "DevLib:     "
+	cd devLib;   $(MAKE) DESTDIR=$$DESTDIR uninstall
+	@echo -n "GPIO:     "
+	cd gpio;     $(MAKE) DESTDIR=$$DESTDIR uninstall
 	@$(do-listing)
 	@echo done
 
-# manpage ####################################################################
-man: man/$(D).1
-	cd man; cat $(D).1 |gzip >$(D).1.gz
+# clean ######################################################################
+clean:
+	cd wiringPi; $(MAKE) clean
+	cd devLib;   $(MAKE) clean
+	cd gpio;     $(MAKE) clean
 
 # package ####################################################################
-package: man package-unstable package-precise
+package: package-unstable package-precise
 	@echo "\nunstable:"
 	@ls -lh $(PD)/unstable
 	@echo "\nprecise:"
@@ -139,5 +157,5 @@ list:
 	@$(do-listing)
 
 # phonies ####################################################################
-.PHONY: install uninstall package package-unstable package-precise
+.PHONY: install uninstall clean package package-unstable package-precise
 .PHONY: package-upload package-clean list

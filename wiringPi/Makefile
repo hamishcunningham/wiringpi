@@ -121,8 +121,8 @@ install:	$(DYNAMIC) install-headers
 	@echo "[Install Dynamic Lib]"
 	@install -m 0755 -d						$(DESTDIR)$(PREFIX)/lib
 	@install -m 0755 libwiringPi.so.$(VERSION)			$(DESTDIR)$(PREFIX)/lib/libwiringPi.so.$(VERSION)
-	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPi.so.$(VERSION)	$(DESTDIR)/lib/libwiringPi.so
-	@ldconfig
+	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPi.so.$(VERSION)       $(DESTDIR)$(PREFIX)/lib/libwiringPi.so
+	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
 
 .PHONEY:	install-static
 install-static:	$(STATIC) install-headers
@@ -157,7 +157,7 @@ uninstall:
 	@rm -f $(DESTDIR)$(PREFIX)/include/pcf8591.h
 	@rm -f $(DESTDIR)$(PREFIX)/include/sn3218.h
 	@rm -f $(DESTDIR)$(PREFIX)/lib/libwiringPi.*
-	@ldconfig
+	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
 
 
 .PHONEY:	depend
