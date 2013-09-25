@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 24 Sep 2013 17:15:07 +0300
+Source: wiringpi
+Binary: wiringpi
+Architecture: source all
+Version: 2.13
+Distribution: unstable
+Urgency: low
+Maintainer: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Changed-By: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Description: 
+ wiringpi   - A GPIO library for the Raspberry Pi by Gordon Henderson
+Changes: 
+ wiringpi (2.13) unstable; urgency=low
+ .
+   * Initial Packaging Release.
+Checksums-Sha1: 
+ cc932d33701793f6bd5e71c480e4dde7c658547c 1506 wiringpi_2.13.dsc
+ f5a4ca31833eeb085c83ea2e1e3e47524291fba0 119488 wiringpi_2.13.tar.gz
+ d03152ef83098f70ca45e70ca7c987aaa072531d 66260 wiringpi_2.13_all.deb
+Checksums-Sha256: 
+ fa77e1180b2e7c751382110933baef940dd82adf2320bf11671a34f1b7d4fee0 1506 wiringpi_2.13.dsc
+ 241cea6794e9fa37522336f5aec33ff28aa3ed15f623c32682eb5712f16427c0 119488 wiringpi_2.13.tar.gz
+ 8295ce3328f9e3cedd5b184e9687b8fffaa13f46338b02ee493894786966619c 66260 wiringpi_2.13_all.deb
+Files: 
+ 39f84bfee4c9ae4479bb012fc9876267 1506 admin optional wiringpi_2.13.dsc
+ bd73a3151cc41e06d6f1d394cb5b4a25 119488 admin optional wiringpi_2.13.tar.gz
+ 3aa79a260aaf532a5a2ef63d3ab32dda 66260 admin optional wiringpi_2.13_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJSQrkKAAoJEK3gE8dtAR3xgVwQALSQ+/eg8isuOFPAAWPQNKv+
+PXXGHS3DEsH7VnETWMyCqulbgZo1HpR8kahfmu2b3gLtdAmoK0OXJ6ZiODv0BZSZ
+pfOMXOZDcYU8N3B05Q3tHncki68K1SOuc/HGYU7oEQ0TKlmoRs03iY2rm9WzK+RR
+NNAQ/1OoLINNVfp25aCCkpXtvsqE2/pjAuuY7maEqIcGH1HscGmR8BkESSSqUVIs
+gwoagl/MDe1IK980kWjT1aAkvPNZwx5kJcy9H8x7DNpsD5kJtybfyvSHmWPfr3Dv
+YV3JzUNCGwHP+Tst0SfBAhxS/RCkG5NLzNjq/TL4kfyWY869uh2Ul/zM7W64hU5d
+mGObNax3eyvUkSxRgTOptjKuixVV+DnOTOf3mFnaXuND2jK8NkFf8bsL9trmK/bw
+90dKH6NyXc7miv6jcUXHtE5hOxikerIhoTNl+HwQn2sz6A4kdLVTyCvxej9ZrHN9
+kpnP7PNdjlQ8Ag6A8yn9VoIEcSB/azd1yjumI2vNtv/mGvaWrms0ns+GkkPi00JO
+uDlVV1vGSTWqO9VkgnevU4U5FtzRseJh3BKRiwWC1q2q0ApEsxz2CfbBduoLwUbe
+vjG1pESMsxzF9nE/8m2Bc41Q/3dWvtIhWcN72kzHqz607KY4kVY8Ggy6uAmlMPDl
+Di9IOYwrER6sj0nXTSqx
+=1F1n
+-----END PGP SIGNATURE-----
