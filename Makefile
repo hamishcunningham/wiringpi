@@ -92,7 +92,7 @@ package-unstable:
 	rm -f $(PD)/unstable/*
 	sed -i \
           's,\(^$(P) ('$(VERSION)') \)[a-z]*,\1unstable,' debian/changelog
-	debuild -Ipackage
+	debuild -I.git -Ipackage
 	@echo ""
 	cd .. && for f in $(PACKAGE_FILES); do \
           [ -f $$f ] && mv $$f $(D)/$(PD)/unstable || :; done
@@ -101,7 +101,7 @@ package-precise:
 	mkdir -p $(PD)/precise
 	rm -f $(PD)/precise/*
 	sed -i 's,\(^$(P) ('$(VERSION)') \)[a-z]*,\1precise,' debian/changelog
-	debuild -S -Ipackage
+	debuild -S -I.git -Ipackage
 	sed -i 's,\(^$(P) ('$(VERSION)') \)[a-z]*,\1unstable,' \
           debian/changelog
 	@echo ""
@@ -115,7 +115,7 @@ snapshot:
 	       -e 's,^$(P) ($(VERSION),$(P) ($(SNAPSHOT_VERSION),' \
           debian/changelog
 	@head -1 debian/changelog
-	debuild -S -Ipackage
+	debuild -S -I.git -Ipackage
 	sed -i -e 's,^$(P) ($(SNAPSHOT_VERSION),$(P) ($(VERSION),' \
                -e 's,\(^$(P) ('$(VERSION)') \)[a-z]*,\1unstable,' \
           debian/changelog
