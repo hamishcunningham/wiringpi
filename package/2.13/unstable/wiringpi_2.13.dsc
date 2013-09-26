@@ -4,7 +4,7 @@ Hash: SHA1
 Format: 3.0 (native)
 Source: wiringpi
 Binary: wiringpi
-Architecture: all
+Architecture: any
 Version: 2.13
 Maintainer: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
 Homepage: http://wiringpi.com/
@@ -14,26 +14,26 @@ Build-Depends: debhelper (>= 8.0.0), devscripts
 Package-List: 
  wiringpi deb admin optional
 Checksums-Sha1: 
- f5a4ca31833eeb085c83ea2e1e3e47524291fba0 119488 wiringpi_2.13.tar.gz
+ d64d1eebd42b297a90b2b2c4670c8d216a35a9be 119494 wiringpi_2.13.tar.gz
 Checksums-Sha256: 
- 241cea6794e9fa37522336f5aec33ff28aa3ed15f623c32682eb5712f16427c0 119488 wiringpi_2.13.tar.gz
+ a6a00d29703169c03528bcebcdc8c8a2baa501397da12e5fb82022de5db0e308 119494 wiringpi_2.13.tar.gz
 Files: 
- bd73a3151cc41e06d6f1d394cb5b4a25 119488 wiringpi_2.13.tar.gz
+ 9553dd7d1994adebb2510c1195233d70 119494 wiringpi_2.13.tar.gz
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
+Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSQrkKAAoJEK3gE8dtAR3xvGAQAL/EeNGYedq0NcE8SUuXJWOe
-uZXJMHVr1I8jh8EurcVTWNFHpbt5GFe5Q+3RdBMTYvKwV2tbv/KdS+B4Cyihc477
-ZxJdtrhiTTSslQjRARDDFixkaiOUSzMzOS4iTBrQXYfyTA+jGcFGjTbiFzSQJcRk
-V9g9gyxbeERicDiegm8iBvpR9YVeG5yYXh5i0OhmkVSVUXQQYM2HWvbAi/XyFd4I
-l1PdN6i7HIxY6rShGZsGU/AlzC9hHuUwtSOedyaKUFKJCbACwiGvPyMty+MfxIm8
-Wzdlary/bYjCh7ErwSZB70dXiQ5BlwmTYTG6JsnLTqde/NQyqn9WfsivOXWHuQ2c
-IGE9UnMpdEqUQsXHiT+uqfQI5UybkxclSOKXdiOTWty+uNDQW3AnO8caQxFOqQD/
-yLGR0B53Jo1f4ldb/o0ptAjGJ28ekeU+jNJchv6VuPXStxfEYmLt9mvYe97rTXlb
-xzPNPbCBSPRWUnwJKm9Z0TI2CfXGHir8WOzuTvBTZfPd4B78JB9HZs3tWpmEn2oJ
-990IopJ/Xf906/V4DACtKmCy3QPux+fqhifIsAdXgBhZ1ut8boRRAMKHV0oBM7xw
-hLxjBXgDoK6x/su3HFzCQPM2lASbhho6E15kRVerhiba+XCWHN9k1AP2Z7E7M1de
-v7YPuwi+VCbgr+7/4lV5
-=t1V4
+iQIcBAEBAgAGBQJSQ+15AAoJEK3gE8dtAR3xxYgQAI8L5LbMZf3rdCDdReHz7ef2
+aF3b4uCNEFWh9VDodBb/iHWdkE/vQWdSVzDe6se4l7g/N7n7vCshSAjC6BeDrUF1
+DyKaR0JG+loMYXDxNk/t9g3wIXJbnZbe/c2Mcy6IImDf6bWgvnxDG6NqRQGcS3GV
+tl5DvIJVv+1rN8ZINOFRVoWVOEhI/B7SNkXHwdzrm04Mnb1tXRZMzkkfV5cxlErx
+MxoSNjEIQlFMLbpC8CzDzIidhC+zh0xSCLX37yFEMTk8+8akD24njoeYshD8OhZ5
+gMdH2N4ONKyYTz6ZwbGa+a+DHpfl0HeVp7VuttiOh2KNbxB77xrvws1U/YoqL8Hs
+DnuU2ZvQORHVYceO+/+5vrrZHLiuwJ8YCkAtgUyzyw4DAdeNb05X1iidhSqgAzxC
+XTjc+M8qna7jEyKljOaGrReTSgQCzkFN6mnPmH8jSa1TjT15nkhbFD9BW905liE8
+RVOgeMMafGlJ1PVhMKFfThIklLELBPV8ZeV+ghG5x+3NoDy69gasD3kR46YBuVUf
+hixAdR4zk9VAzcnrhbZIx6GA0O1MU5BdJzAEZsUyGZBGFl688J2Jqy6DD71btASs
+ycC6vXl86ZffZEBIvMy4IvXbLWLj0/CHUXdKc1Vh4lXOe1Kq3CN+ySZEs+5regaY
+KieFrq3LKC3KrK2i0skC
+=n3pz
 -----END PGP SIGNATURE-----

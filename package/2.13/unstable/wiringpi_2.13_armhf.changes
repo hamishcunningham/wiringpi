@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 25 Sep 2013 15:07:24 +0100
+Source: wiringpi
+Binary: wiringpi
+Architecture: source armhf
+Version: 2.13
+Distribution: unstable
+Urgency: low
+Maintainer: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Changed-By: Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+Description: 
+ wiringpi   - A GPIO library for the Raspberry Pi by Gordon Henderson
+Changes: 
+ wiringpi (2.13) unstable; urgency=low
+ .
+   * Snapshots in the 2.13+14 series.
+Checksums-Sha1: 
+ 5537b26e0d11d4b15de5a32346fcf82781c3007c 1506 wiringpi_2.13.dsc
+ d64d1eebd42b297a90b2b2c4670c8d216a35a9be 119494 wiringpi_2.13.tar.gz
+ cf7766e9cad1fb5449a905b90dbe2dbcfc4419f6 47656 wiringpi_2.13_armhf.deb
+Checksums-Sha256: 
+ 1b09b689bfbc2bf65b607c44a9919a529396853c0f30ac76c59b565b85c1d09f 1506 wiringpi_2.13.dsc
+ a6a00d29703169c03528bcebcdc8c8a2baa501397da12e5fb82022de5db0e308 119494 wiringpi_2.13.tar.gz
+ d2e48078a3cff6b3857649deb1cfa58ebf9a1e63c77f37c05426809acc488141 47656 wiringpi_2.13_armhf.deb
+Files: 
+ aaa9f7c30d0b9fcf38d1bfb403117828 1506 admin optional wiringpi_2.13.dsc
+ 9553dd7d1994adebb2510c1195233d70 119494 admin optional wiringpi_2.13.tar.gz
+ de6c8f03fcdb4dc825fa30b6d0858f3c 47656 admin optional wiringpi_2.13_armhf.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQIcBAEBAgAGBQJSQ+2IAAoJEK3gE8dtAR3xv4EP/1bCYnkAY2Ck+ZJwo6YVzjCA
+/KSfUJ6ZKpse2NG2tGp4LMtQ7MjMcbJSVSyuLu+2sA7PNOUBiDgF49IEw79nvxTB
+GPUq9y+q0A8weZGfYs8rGjb2NtGSqkWEQtWHmycFgMVILEzv5wrakHs4JfszlI4H
+tAjqmysTIgnw3CrnDoeaAOrKr2tf+nhGXxHbpoeCwrtCwcTZ0umhXF9eNk/ChQBH
+wx9JOsWDpClwBn4X3gL/wl3ZzVCiK9Uxh9PW+jAPx9kCt2MZG1Me1FsDoVTcF7mJ
+rkRKN/yVpVuk4EjKjYa62QEQccX8svFG20jJ7p0Lkz1SDKjyFamspVKd6WrI46dP
+rtyAHwshoPapNCnP6Sh7ShdV2H5pyGZUwUkB2HPE26CW++uXGs/onhceuLGu2V4t
+G2vDK9DKecnvO6AzRcZnBGbOvzRhbwGT5Re9nydKPDCIV4r95UjRjluIYrMa3ltq
+kgJkmmIXfze1QT5SNIH7Z1V77Jj3KYtWqyTURt+9Gv17o0l4ZR1Ujw5njg2MEbZc
+tgbHJfXq2/z38iNhtzKpRcIKDwPkzQUG+klkrWvxzVq9e0tFum1cxqO+vFGj6FWz
+l01KhTBRaVJVOFJHEVFNJNopVRRP3nj/YoHNhGIkWa3a1UeJ7lOlUI78DW1LNsV3
+xmaIaVAn1R2KmG+jHVTm
+=hut1
+-----END PGP SIGNATURE-----

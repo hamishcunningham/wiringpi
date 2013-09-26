@@ -1,0 +1,303 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -I.git -Ipackage
+dpkg-buildpackage: source package wiringpi
+dpkg-buildpackage: source version 2.13
+dpkg-buildpackage: source changed by Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+ dpkg-source -I.git -Ipackage --before-build wiringpi
+dpkg-buildpackage: host architecture armhf
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+	make -j1 clean
+make[1]: Entering directory `/home/pi/wiringpi'
+cd wiringPi; make clean
+make[2]: Entering directory `/home/pi/wiringpi/wiringPi'
+[Clean]
+make[2]: Leaving directory `/home/pi/wiringpi/wiringPi'
+cd devLib;   make clean
+make[2]: Entering directory `/home/pi/wiringpi/devLib'
+[Clean]
+make[2]: Leaving directory `/home/pi/wiringpi/devLib'
+cd gpio;     make clean
+make[2]: Entering directory `/home/pi/wiringpi/gpio'
+[Clean]
+make[2]: Leaving directory `/home/pi/wiringpi/gpio'
+make[1]: Leaving directory `/home/pi/wiringpi'
+   dh_clean
+	rm -f debian/wiringpi.substvars
+	rm -f debian/wiringpi.*.debhelper
+	rm -rf debian/wiringpi/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+	rm -f *-stamp
+ dpkg-source -I.git -Ipackage -b wiringpi
+dpkg-source: info: using source format `3.0 (native)'
+dpkg-source: info: building wiringpi in wiringpi_2.13.tar.gz
+dpkg-source: info: building wiringpi in wiringpi_2.13.dsc
+ debian/rules build
+make: `build' is up to date.
+ fakeroot debian/rules binary
+dh binary 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+	make -j1
+make[1]: Entering directory `/home/pi/wiringpi'
+Makefile for WiringPi Debian Packaging                        
+                                                              
+Usage:                                                        
+   make install                   installs WiringPi           
+   make uninstall                 removes WiringPi            
+   make list                      list installed files        
+   make package                   create .deb/.dcs packagings 
+   make package-upload            upload to PPA repository    
+   make package-clean             delete tmp packaging files  
+   make package-info              apt-cache showpkg           
+   make package-purge             apt-get purge               
+   make package-version           update the changelog        
+                                                              
+make[1]: Leaving directory `/home/pi/wiringpi'
+   dh_auto_test
+   dh_testroot
+   dh_prep
+	rm -f debian/wiringpi.substvars
+	rm -f debian/wiringpi.*.debhelper
+	rm -rf debian/wiringpi/
+   dh_installdirs
+	install -d debian/wiringpi
+   dh_auto_install
+	make -j1 install DESTDIR=/home/pi/wiringpi/debian/wiringpi AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory `/home/pi/wiringpi'
+WiringPi:     cd wiringPi; make PREFIX=/usr DESTDIR=$DESTDIR; \
+          make PREFIX=/usr DESTDIR=$DESTDIR install
+make[2]: Entering directory `/home/pi/wiringpi/wiringPi'
+[Compile] wiringPi.c
+[Compile] wiringSerial.c
+[Compile] wiringShift.c
+[Compile] piHiPri.c
+[Compile] piThread.c
+[Compile] wiringPiSPI.c
+[Compile] wiringPiI2C.c
+[Compile] softPwm.c
+[Compile] softTone.c
+[Compile] mcp23008.c
+[Compile] mcp23016.c
+[Compile] mcp23017.c
+[Compile] mcp23s08.c
+[Compile] mcp23s17.c
+[Compile] sr595.c
+[Compile] pcf8574.c
+[Compile] pcf8591.c
+[Compile] mcp3002.c
+[Compile] mcp3004.c
+[Compile] mcp4802.c
+[Compile] mcp3422.c
+[Compile] max31855.c
+[Compile] max5322.c
+[Compile] sn3218.c
+[Compile] drcSerial.c
+[Link (Dynamic)]
+make[2]: Leaving directory `/home/pi/wiringpi/wiringPi'
+make[2]: Entering directory `/home/pi/wiringpi/wiringPi'
+[Install Headers]
+[Install Dynamic Lib]
+make[2]: Leaving directory `/home/pi/wiringpi/wiringPi'
+DevLib:     cd devLib;   make PREFIX=/usr DESTDIR=$DESTDIR; \
+          make PREFIX=/usr DESTDIR=$DESTDIR install
+make[2]: Entering directory `/home/pi/wiringpi/devLib'
+[Compile] ds1302.c
+[Compile] maxdetect.c
+[Compile] piNes.c
+[Compile] gertboard.c
+[Compile] piFace.c
+[Compile] lcd128x64.c
+[Compile] lcd.c
+[Compile] piGlow.c
+[Link (Dynamic)]
+make[2]: Leaving directory `/home/pi/wiringpi/devLib'
+make[2]: Entering directory `/home/pi/wiringpi/devLib'
+[Install Headers]
+[Install Dynamic Lib]
+make[2]: Leaving directory `/home/pi/wiringpi/devLib'
+GPIO:     cd gpio;     make PREFIX=/usr DESTDIR=$DESTDIR; \
+          make PREFIX=/usr DESTDIR=$DESTDIR install
+make[2]: Entering directory `/home/pi/wiringpi/gpio'
+[Compile] gpio.c
+gpio.c:85:12: warning: ‘decodePin’ defined but not used [-Wunused-function]
+[Compile] extensions.c
+[Compile] readall.c
+[Link]
+make[2]: Leaving directory `/home/pi/wiringpi/gpio'
+make[2]: Entering directory `/home/pi/wiringpi/gpio'
+[Install]
+install -d -m 755       /home/pi/wiringpi/debian/wiringpi/usr/bin
+install -d -m 755       /home/pi/wiringpi/debian/wiringpi/usr/lib
+install -d -m 755       /home/pi/wiringpi/debian/wiringpi/usr/include
+install -d -m 755       /home/pi/wiringpi/debian/wiringpi/usr/share/man/man1
+install -m 4755 gpio    /home/pi/wiringpi/debian/wiringpi/usr/bin
+cat gpio.1 |gzip >gpio.1.gz
+install gpio.1.gz       /home/pi/wiringpi/debian/wiringpi/usr/share/man/man1
+make[2]: Leaving directory `/home/pi/wiringpi/gpio'
+
+[Listing installed files:]
+ls: cannot access /home/pi/wiringpi/debian/wiringpi/usr/man/man1/gpio.1.gz: No such file or directory
+-rwsr-xr-x 1 root root 34576 Sep 26 08:14 [0m[37;41m/home/pi/wiringpi/debian/wiringpi/usr/bin/gpio[0m
+-rw-r--r-- 1 root root  5462 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPi.h
+-rw-r--r-- 1 root root  1579 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiI2C.h
+-rw-r--r-- 1 root root  1250 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiSPI.h
+lrwxrwxrwx 1 root root    63 Sep 26 08:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0
+-rwxr-xr-x 1 root root 23229 Sep 26 08:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0[0m[K
+lrwxrwxrwx 1 root root    60 Sep 26 08:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0
+-rwxr-xr-x 1 root root 43144 Sep 26 08:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0[0m
+make[1]: Leaving directory `/home/pi/wiringpi'
+   dh_install
+   dh_installdocs
+	install -g 0 -o 0 -d debian/wiringpi/usr/share/doc/wiringpi
+	cp -a gpio/gpio.1 debian/wiringpi/usr/share/doc/wiringpi
+	cp -a README.TXT debian/wiringpi/usr/share/doc/wiringpi
+	chown -R 0:0 debian/wiringpi/usr/share/doc
+	chmod -R go=rX debian/wiringpi/usr/share/doc
+	chmod -R u\+rw debian/wiringpi/usr/share/doc
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/wiringpi/usr/share/doc/wiringpi/copyright
+   dh_installchangelogs
+	install -o 0 -g 0 -p -m644 debian/changelog debian/wiringpi/usr/share/doc/wiringpi/changelog
+   dh_installexamples
+   dh_installman
+	man --recode UTF-8 ./gpio\.1\.gz > gpio\.1\.gz\.new
+	rm -f gpio.1.gz
+	chmod 644 gpio.1.gz.new
+	mv -f gpio.1.gz.new gpio.1
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+	install -o 0 -g 0 -d debian/wiringpi/DEBIAN
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p
+	/usr/share/python-support/private/movemodules debian/wiringpi
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+	rm -f debian/wiringpi/usr/lib/libwiringPiDev.so
+	ln -sf /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 debian/wiringpi/usr/lib/libwiringPiDev.so
+	rm -f debian/wiringpi/usr/lib/libwiringPi.so
+	ln -sf /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0 debian/wiringpi/usr/lib/libwiringPi.so
+   dh_compress
+	cd debian/wiringpi
+	chmod a-x usr/share/man/man1/gpio.1 usr/share/doc/wiringpi/changelog usr/share/doc/wiringpi/gpio.1
+	gzip -9nf usr/share/man/man1/gpio.1 usr/share/doc/wiringpi/changelog usr/share/doc/wiringpi/gpio.1
+	cd '/home/pi/wiringpi'
+   dh_fixperms
+	find debian/wiringpi  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/wiringpi ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/wiringpi/usr/share/doc -type f  ! -regex 'debian/wiringpi/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/wiringpi/usr/share/man debian/wiringpi/usr/man/ debian/wiringpi/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/wiringpi/usr/lib/perl5 debian/wiringpi/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/wiringpi/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/wiringpi/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+   dh_strip
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/wiringpi/usr/lib/libwiringPiDev.so.2.0
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/wiringpi/usr/lib/libwiringPi.so.2.0
+	strip --remove-section=.comment --remove-section=.note debian/wiringpi/usr/bin/gpio
+   dh_makeshlibs
+	rm -f debian/wiringpi/DEBIAN/shlibs
+   dh_shlibdeps
+	dpkg-shlibdeps -Tdebian/wiringpi.substvars debian/wiringpi/usr/bin/gpio debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 debian/wiringpi/usr/lib/libwiringPi.so.2.0
+dpkg-shlibdeps: warning: Can't extract name and version from library name `libwiringPiDev.so'
+dpkg-shlibdeps: warning: Can't extract name and version from library name `libwiringPiDev.so'
+dpkg-shlibdeps: warning: Can't extract name and version from library name `libwiringPi.so'
+dpkg-shlibdeps: warning: Can't extract name and version from library name `libwiringPi.so'
+dpkg-shlibdeps: warning: symbol digitalWriteByte used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol wiringPiNewNode used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol sn3218Setup used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol wiringPiSPIDataRW used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol delay used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol digitalWrite used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol pullUpDnControl used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol millis used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol pinMode used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol mcp23s17Setup used by debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 found in none of the libraries
+dpkg-shlibdeps: warning: 4 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/wiringpi/usr/bin/gpio was not linked against libm.so.6 (it uses none of the library's symbols)
+   dh_installdeb
+	sed s/#DEBHELPER#// < debian/postinst > debian/wiringpi/DEBIAN/postinst
+	chown 0:0 debian/wiringpi/DEBIAN/postinst
+	chmod 755 debian/wiringpi/DEBIAN/postinst
+	sed s/#DEBHELPER#// < debian/postrm > debian/wiringpi/DEBIAN/postrm
+	chown 0:0 debian/wiringpi/DEBIAN/postrm
+	chmod 755 debian/wiringpi/DEBIAN/postrm
+   dh_gencontrol
+	echo misc:Depends= >> debian/wiringpi.substvars
+	dpkg-gencontrol -ldebian/changelog -Tdebian/wiringpi.substvars -Pdebian/wiringpi
+dpkg-gencontrol: warning: package wiringpi: unused substitution variable ${shlibs:Depends}
+	chmod 644 debian/wiringpi/DEBIAN/control
+	chown 0:0 debian/wiringpi/DEBIAN/control
+   dh_md5sums
+	(cd debian/wiringpi >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/wiringpi/DEBIAN/md5sums
+	chown 0:0 debian/wiringpi/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/wiringpi ..
+dpkg-deb: building package `wiringpi' in `../wiringpi_2.13_armhf.deb'.
+ dpkg-genchanges  >../wiringpi_2.13_armhf.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source -I.git -Ipackage --after-build wiringpi
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+Now running lintian...
+W: wiringpi: package-name-doesnt-match-sonames libwiringPi libwiringPiDev
+W: wiringpi: hardening-no-relro usr/bin/gpio
+W: wiringpi: hardening-no-fortify-functions usr/bin/gpio
+W: wiringpi: hardening-no-relro usr/lib/libwiringPi.so.2.0
+W: wiringpi: hardening-no-fortify-functions usr/lib/libwiringPi.so.2.0
+W: wiringpi: hardening-no-relro usr/lib/libwiringPiDev.so.2.0
+W: wiringpi: hardening-no-fortify-functions usr/lib/libwiringPiDev.so.2.0
+W: wiringpi: missing-depends-line
+W: wiringpi: latest-debian-changelog-entry-without-new-version
+W: wiringpi: description-synopsis-starts-with-article
+W: wiringpi: manpage-section-mismatch usr/share/man/man1/gpio.1.gz:1 1 != March 2013
+E: wiringpi: ldconfig-symlink-referencing-wrong-file usr/lib/libwiringPiDev.so -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0 instead of libwiringPiDev.so.2.0
+W: wiringpi: non-dev-pkg-with-shlib-symlink usr/lib/libwiringPiDev.so.2.0 usr/lib/libwiringPiDev.so
+E: wiringpi: ldconfig-symlink-referencing-wrong-file usr/lib/libwiringPi.so -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0 instead of libwiringPi.so.2.0
+W: wiringpi: non-dev-pkg-with-shlib-symlink usr/lib/libwiringPi.so.2.0 usr/lib/libwiringPi.so
+W: wiringpi: shlib-without-versioned-soname usr/lib/libwiringPiDev.so.2.0 libwiringPiDev.so
+W: wiringpi: shlib-without-versioned-soname usr/lib/libwiringPi.so.2.0 libwiringPi.so
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile wiringpi_2.13.dsc Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+gpg: gpg-agent is not available in this session
+
+ signfile wiringpi_2.13_armhf.changes Hamish Cunningham (http://gate.ac.uk/hamish/) <hamish@gate.ac.uk>
+gpg: gpg-agent is not available in this session
+
+Successfully signed dsc and changes files
