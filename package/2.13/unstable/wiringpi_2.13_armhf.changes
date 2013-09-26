@@ -18,32 +18,32 @@ Changes:
  .
    * Snapshots in the 2.13+14 series.
 Checksums-Sha1: 
- 5537b26e0d11d4b15de5a32346fcf82781c3007c 1506 wiringpi_2.13.dsc
- d64d1eebd42b297a90b2b2c4670c8d216a35a9be 119494 wiringpi_2.13.tar.gz
- cf7766e9cad1fb5449a905b90dbe2dbcfc4419f6 47656 wiringpi_2.13_armhf.deb
+ 64d64f19d5e6f96dbcd990d6001de1433cc88cb6 1506 wiringpi_2.13.dsc
+ a1026e593222435a1fb1ae79571b233a5035a754 119961 wiringpi_2.13.tar.gz
+ 705d82d6464ed326ef09e5eba1150ccf28149d5e 47730 wiringpi_2.13_armhf.deb
 Checksums-Sha256: 
- 1b09b689bfbc2bf65b607c44a9919a529396853c0f30ac76c59b565b85c1d09f 1506 wiringpi_2.13.dsc
- a6a00d29703169c03528bcebcdc8c8a2baa501397da12e5fb82022de5db0e308 119494 wiringpi_2.13.tar.gz
- d2e48078a3cff6b3857649deb1cfa58ebf9a1e63c77f37c05426809acc488141 47656 wiringpi_2.13_armhf.deb
+ 9c5350f8db0d16d6e09d63e4d08cce98b27143383c5abaa3b7095354d6be5f7b 1506 wiringpi_2.13.dsc
+ 9cc0b7f0178a0df621c91d8aa25b619af2838723dd49cc1f16daa5adf5166689 119961 wiringpi_2.13.tar.gz
+ 2dfd82b8e3bd3b7ef52f86eb599b62bc733a59603078f43fa656d8058829e019 47730 wiringpi_2.13_armhf.deb
 Files: 
- aaa9f7c30d0b9fcf38d1bfb403117828 1506 admin optional wiringpi_2.13.dsc
- 9553dd7d1994adebb2510c1195233d70 119494 admin optional wiringpi_2.13.tar.gz
- de6c8f03fcdb4dc825fa30b6d0858f3c 47656 admin optional wiringpi_2.13_armhf.deb
+ 97273d872258db21ed147438cd3ec180 1506 admin optional wiringpi_2.13.dsc
+ b95bb5dc14165fd055261c99efc659bb 119961 admin optional wiringpi_2.13.tar.gz
+ cbf510eec1629fb7d9ebba5c6841aec1 47730 admin optional wiringpi_2.13_armhf.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSQ+2IAAoJEK3gE8dtAR3xv4EP/1bCYnkAY2Ck+ZJwo6YVzjCA
-/KSfUJ6ZKpse2NG2tGp4LMtQ7MjMcbJSVSyuLu+2sA7PNOUBiDgF49IEw79nvxTB
-GPUq9y+q0A8weZGfYs8rGjb2NtGSqkWEQtWHmycFgMVILEzv5wrakHs4JfszlI4H
-tAjqmysTIgnw3CrnDoeaAOrKr2tf+nhGXxHbpoeCwrtCwcTZ0umhXF9eNk/ChQBH
-wx9JOsWDpClwBn4X3gL/wl3ZzVCiK9Uxh9PW+jAPx9kCt2MZG1Me1FsDoVTcF7mJ
-rkRKN/yVpVuk4EjKjYa62QEQccX8svFG20jJ7p0Lkz1SDKjyFamspVKd6WrI46dP
-rtyAHwshoPapNCnP6Sh7ShdV2H5pyGZUwUkB2HPE26CW++uXGs/onhceuLGu2V4t
-G2vDK9DKecnvO6AzRcZnBGbOvzRhbwGT5Re9nydKPDCIV4r95UjRjluIYrMa3ltq
-kgJkmmIXfze1QT5SNIH7Z1V77Jj3KYtWqyTURt+9Gv17o0l4ZR1Ujw5njg2MEbZc
-tgbHJfXq2/z38iNhtzKpRcIKDwPkzQUG+klkrWvxzVq9e0tFum1cxqO+vFGj6FWz
-l01KhTBRaVJVOFJHEVFNJNopVRRP3nj/YoHNhGIkWa3a1UeJ7lOlUI78DW1LNsV3
-xmaIaVAn1R2KmG+jHVTm
-=hut1
+iQIcBAEBAgAGBQJSRAnSAAoJEK3gE8dtAR3xZzEQANooh3e7ey3gq0obAR2Mjw8E
+wC/7ggcIsR5HkJJJ3WAnRkV610wRwtWhn0JVjE/lVYsacx9M7xqhpvcRZDVYGPt3
+tRRA0Ts+EOEbsgMBy9wMWLaqpUNJeptc0hdL8BPwbmo6u6Ng/H3QtwdSyGz3tX3f
+SyxyA15292zeWLx82qYdJrWdrI0olRO9a6O3sb3iwZB1YaZqcGeF4tFwAyx6LJmV
+cZMtouGqCmp4dqpASz0fQxeHDkJL0jOdkUOsr+sz6EGx+3FCFaEG/x0aJl1+EtlC
+fcjj7t7DaduNPtkVX0tOS4IyHr1I673nnwRIAmv1KHrFBtfFFQLuwrJQgPomcSIs
+RHqoZf2Ps3VmAELxV/+UgyYEnqy9E6HaUWyr26OqePScNI0qqDxQzIxuOohjdU4k
+b7gwfpXrWS17LZ2DsED89eJRqgOQ+eaDSQkebNrouuHvzMegtyDQztMhZ8XxGJbV
+IcJNULDnWTin1wMOpYsxmWUBXc9BgAG9r3pfm7i6RJF86cI29Py39XJR4Hsp+cwP
+cOdj9KkJRcIzH5Ryq+9PE00vxiTU0ulvyIXXoPKmBlSyhGop/dU4eugYIPv0i7gT
+dk4T2M8eUPIxHDpSSGGCVefIA22Mv4hlvhyuCT0e0PXEyQFFzIh0j8H9l8GYWeMd
+m9D7fhtS3nQ8pBxK4WXX
+=/ij4
 -----END PGP SIGNATURE-----

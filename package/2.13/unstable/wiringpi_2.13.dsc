@@ -14,26 +14,26 @@ Build-Depends: debhelper (>= 8.0.0), devscripts
 Package-List: 
  wiringpi deb admin optional
 Checksums-Sha1: 
- d64d1eebd42b297a90b2b2c4670c8d216a35a9be 119494 wiringpi_2.13.tar.gz
+ a1026e593222435a1fb1ae79571b233a5035a754 119961 wiringpi_2.13.tar.gz
 Checksums-Sha256: 
- a6a00d29703169c03528bcebcdc8c8a2baa501397da12e5fb82022de5db0e308 119494 wiringpi_2.13.tar.gz
+ 9cc0b7f0178a0df621c91d8aa25b619af2838723dd49cc1f16daa5adf5166689 119961 wiringpi_2.13.tar.gz
 Files: 
- 9553dd7d1994adebb2510c1195233d70 119494 wiringpi_2.13.tar.gz
+ b95bb5dc14165fd055261c99efc659bb 119961 wiringpi_2.13.tar.gz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSQ+15AAoJEK3gE8dtAR3xxYgQAI8L5LbMZf3rdCDdReHz7ef2
-aF3b4uCNEFWh9VDodBb/iHWdkE/vQWdSVzDe6se4l7g/N7n7vCshSAjC6BeDrUF1
-DyKaR0JG+loMYXDxNk/t9g3wIXJbnZbe/c2Mcy6IImDf6bWgvnxDG6NqRQGcS3GV
-tl5DvIJVv+1rN8ZINOFRVoWVOEhI/B7SNkXHwdzrm04Mnb1tXRZMzkkfV5cxlErx
-MxoSNjEIQlFMLbpC8CzDzIidhC+zh0xSCLX37yFEMTk8+8akD24njoeYshD8OhZ5
-gMdH2N4ONKyYTz6ZwbGa+a+DHpfl0HeVp7VuttiOh2KNbxB77xrvws1U/YoqL8Hs
-DnuU2ZvQORHVYceO+/+5vrrZHLiuwJ8YCkAtgUyzyw4DAdeNb05X1iidhSqgAzxC
-XTjc+M8qna7jEyKljOaGrReTSgQCzkFN6mnPmH8jSa1TjT15nkhbFD9BW905liE8
-RVOgeMMafGlJ1PVhMKFfThIklLELBPV8ZeV+ghG5x+3NoDy69gasD3kR46YBuVUf
-hixAdR4zk9VAzcnrhbZIx6GA0O1MU5BdJzAEZsUyGZBGFl688J2Jqy6DD71btASs
-ycC6vXl86ZffZEBIvMy4IvXbLWLj0/CHUXdKc1Vh4lXOe1Kq3CN+ySZEs+5regaY
-KieFrq3LKC3KrK2i0skC
-=n3pz
+iQIcBAEBAgAGBQJSRAmnAAoJEK3gE8dtAR3xJJUP/0WJmA3fCuhPXz2NiYrahXMR
+ru4fxn15u2pmGQX5PgMbpPyz4XSRGf7NxvYhsFCxSpCyZgA1wDI/kThUVKLbj0Kw
+axa8kTASdkirQ6Ar8c+nczn6YJ+tjoa6Aqw2m7ij1p6ei1Gg869A4/L/2BL7XlLC
+AMRkTwbv/vXreHNIN+/e388OZfsEbF4sQujVeJN1NHSJdGzSbToCjj20F5H/qxuQ
+9MIDVFEC1uVcA+mFM0ToqF4GVz2X0PQzfXXE/djYpM7UVmd+0kaBAmWWmipfTesR
+YJO72GMl8md5oCj13e0nfAsvhn4h/eKqp9Jzr3uuSe1rhFlr8l8I9a7GdDGz+Efg
+/ne9qW+ZUdwSqgOZ78FiGk4YUqPMqBDJjG5VceOrTclok+i1AIJZEfcp3u3Fup8i
+TdDTWRpYZ7atyMgQrabyhOJ0S/aCkOutrtsDOQ8Vi3Y2TrPi40nZKs1UzAfouIR3
++V3YdYJLRKnuE1KJuWwSfoJpuToBG/4BsdYkZMyeBEVFAwHn52Gakzg/fUVzLWmH
+uqyonrnzflp5AO8iNKyR0PVwQBVm0vqYeefazpEaD5hjw202EHQm/IxzpDkaz6bS
+gXlKPk3DcgiAcqh10RWSkEp+z7t8CoKu4fhiZ5R9i4V0yGisqUy+Ea9EkhiYbdyx
+G0qb9LpD5eewmIcpxUfb
+=0xL3
 -----END PGP SIGNATURE-----

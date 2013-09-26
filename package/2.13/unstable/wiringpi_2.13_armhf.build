@@ -147,15 +147,15 @@ install gpio.1.gz       /home/pi/wiringpi/debian/wiringpi/usr/share/man/man1
 make[2]: Leaving directory `/home/pi/wiringpi/gpio'
 
 [Listing installed files:]
-ls: cannot access /home/pi/wiringpi/debian/wiringpi/usr/man/man1/gpio.1.gz: No such file or directory
--rwsr-xr-x 1 root root 34576 Sep 26 08:14 [0m[37;41m/home/pi/wiringpi/debian/wiringpi/usr/bin/gpio[0m
--rw-r--r-- 1 root root  5462 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPi.h
--rw-r--r-- 1 root root  1579 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiI2C.h
--rw-r--r-- 1 root root  1250 Sep 26 08:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiSPI.h
-lrwxrwxrwx 1 root root    63 Sep 26 08:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0
--rwxr-xr-x 1 root root 23229 Sep 26 08:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0[0m[K
-lrwxrwxrwx 1 root root    60 Sep 26 08:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0
--rwxr-xr-x 1 root root 43144 Sep 26 08:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0[0m
+-rwsr-xr-x 1 root root 34576 Sep 26 10:14 [0m[37;41m/home/pi/wiringpi/debian/wiringpi/usr/bin/gpio[0m
+-rw-r--r-- 1 root root  5462 Sep 26 10:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPi.h
+-rw-r--r-- 1 root root  1579 Sep 26 10:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiI2C.h
+-rw-r--r-- 1 root root  1250 Sep 26 10:14 /home/pi/wiringpi/debian/wiringpi/usr/include/wiringPiSPI.h
+lrwxrwxrwx 1 root root    63 Sep 26 10:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0
+-rwxr-xr-x 1 root root 23229 Sep 26 10:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPiDev.so.2.0[0m[K
+lrwxrwxrwx 1 root root    60 Sep 26 10:14 [01;36m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so[0m -> /home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0
+-rwxr-xr-x 1 root root 43144 Sep 26 10:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/lib/libwiringPi.so.2.0[0m
+-rwxr-xr-x 1 root root  3597 Sep 26 10:14 [01;32m/home/pi/wiringpi/debian/wiringpi/usr/share/man/man1/gpio.1.gz[0m[K
 make[1]: Leaving directory `/home/pi/wiringpi'
    dh_install
    dh_installdocs
