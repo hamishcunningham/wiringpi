@@ -13,7 +13,7 @@ INSTALLED_FILES=\
   $(DESTDIR)$(PREFIX)/bin/gpio \
   $(DESTDIR)$(PREFIX)/lib/*wiringPi* \
   $(DESTDIR)$(PREFIX)/include/*wiringPi* \
-  $(DESTDIR)$(PREFIX)/man/man1/gpio.1.gz
+  $(DESTDIR)$(PREFIX)/share/man/man1/gpio.1.gz
 PACKAGE_FILES=\
   $(P)_$(VERSION)*.deb \
   $(P)_$(VERSION)*.dsc \

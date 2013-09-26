@@ -20,7 +20,11 @@ set -e
 
 case "$1" in
     configure)
+      # fix up library links
       ldconfig
+
+      # for some reason the suid on gpio isn't transfered during install
+      [ -f /usr/bin/gpio ] && chmod 4755 /usr/bin/gpio
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
