@@ -68,10 +68,10 @@ install:
 	install -d -m 755       $(DESTDIR)$(PREFIX)/bin
 	install -d -m 755       $(DESTDIR)$(PREFIX)/lib
 	install -d -m 755       $(DESTDIR)$(PREFIX)/include
-	install -d -m 755       $(DESTDIR)$(PREFIX)/man/man1
+	install -d -m 755       $(DESTDIR)$(PREFIX)/share/man/man1
 	install -m 4755 gpio    $(DESTDIR)$(PREFIX)/bin
 	cat gpio.1 |gzip >gpio.1.gz
-	install gpio.1.gz       $(DESTDIR)$(PREFIX)/man/man1
+	install gpio.1.gz       $(DESTDIR)$(PREFIX)/share/man/man1
 
 # TODO do we need this for the final install?
 #	@chown root.root	$(DESTDIR)$(PREFIX)/bin/gpio
@@ -80,8 +80,8 @@ install:
 uninstall:
 	@echo "[UnInstall]"
 	@rm -f $(DESTDIR)$(PREFIX)/bin/gpio
-	@rm -f $(DESTDIR)$(PREFIX)/man/man1/gpio.1
-	@rm -f $(DESTDIR)$(PREFIX)/man/man1/gpio.1.gz
+	@rm -f $(DESTDIR)$(PREFIX)/share/man/man1/gpio.1
+	@rm -f $(DESTDIR)$(PREFIX)/share/man/man1/gpio.1.gz
 
 .PHONEY:	depend
 depend:
