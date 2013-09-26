@@ -2,7 +2,12 @@
 How to install wiringPi
 =======================
 
-The easiest way is to use the supplied 'build' script:
+On Raspbian, you can install wiringPi from a .deb file:
+
+  wget https://raw.github.com/hamishcunningham/wiringpi/master/package/2.13/unstable/wiringpi_2.13_armhf.deb
+  sudo dpkg -i ./wiringpi_2.13_armhf.deb
+
+Another way is to use the supplied 'build' script:
 
   ./build
 

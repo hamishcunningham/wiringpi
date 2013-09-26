@@ -1,6 +1,17 @@
 The Debian Package for WiringPi
 -------------------------------
 
+Maintainer instructions:
+
+- sudo apt-get install devscripts debhelper
+- make package
+- the .deb should now be in the directory package/version/...
+- the Makefile includes code to use an Ubuntu PPA for distribution, but they
+  don't currently support ARM so this is not useful... but according to
+  https://blueprints.launchpad.net/ubuntu/+spec/other-arm-n-public-panda-ppa-build-cluster
+  there a build cluster is being constructed for ARM PPAs, so it would be good
+  to check back there at some point
+
 Comments regarding the package:
 
 - a simple Debian package for WiringPi -- http://wiringpi.com/ -- by Gordon
