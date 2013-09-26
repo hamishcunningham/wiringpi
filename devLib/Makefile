@@ -92,10 +92,13 @@ install-headers:
 .PHONEY:	install
 install:	$(DYNAMIC) install-headers
 	@echo "[Install Dynamic Lib]"
-	@install -m 0755 -d						$(DESTDIR)$(PREFIX)/lib
-	@install -m 0755 libwiringPiDev.so.$(VERSION)			$(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)
-	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)    $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so
+	@install -m 0755 -d $(DESTDIR)$(PREFIX)/lib
+	@install -m 0755 libwiringPiDev.so.$(VERSION) \
+          $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION)
+	@ln -sf $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so.$(VERSION) \
+          $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.so
 	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
+	@if [ x$(DESTDIR) = x/usr ]; then ldconfig; fi
 
 .PHONEY:	install-static
 install-static:	$(STATIC) install-headers
@@ -116,6 +119,7 @@ uninstall:
 	@rm -f $(DESTDIR)$(PREFIX)/include/piGlow.h
 	@rm -f $(DESTDIR)$(PREFIX)/lib/libwiringPiDev.*
 	@ldconfig -n $(DESTDIR)$(PREFIX)/lib
+	@if [ x$(DESTDIR) = x/usr ]; then ldconfig; fi
 
 
 .PHONEY:	depend
